@@ -104,6 +104,16 @@ section { position: relative; }
 .shot.tone-ps { background: linear-gradient(155deg, #142a44, var(--bg-2) 72%); }
 .shot.tone-xb { background: linear-gradient(155deg, #102a18, var(--bg-2) 72%); }
 .shot.tone-sg { background: linear-gradient(155deg, #0b2a3c, var(--bg-2) 72%); }
+/* screenshots reais: cobrem o .shot; scrim embaixo deixa o tag legível */
+.shot .shot-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; z-index: 0; }
+.shot::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(8,10,15,.85) 0%, rgba(8,10,15,.30) 24%, transparent 48%); }
+.shot .shot-tag { z-index: 2; }
+/* zoom sutil no hover (só ponteiro fino; transform na GPU) — respeita reduced-motion */
+@media (hover: hover) and (pointer: fine) {
+  .shot .shot-img { transition: transform .4s var(--ease-out); }
+  .shot:hover .shot-img { transform: scale(1.035); }
+}
+@media (prefers-reduced-motion: reduce) { .shot:hover .shot-img { transform: none; } }
 
 /* ─────────── STEPS ─────────── */
 .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; }
