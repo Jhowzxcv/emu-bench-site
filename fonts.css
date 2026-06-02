@@ -1,0 +1,39 @@
+/* ============================================================
+   fonts.css — OFFLINE @font-face (pywebview build)
+   ────────────────────────────────────────────────────────────
+   Canonical font declarations for the SELF-HOSTED / offline build.
+   Drop these three files into web/fonts/ and this file needs no CDN:
+
+     fonts/ClashDisplay-Variable.woff2   (Fontshare → Clash Display, var 400–700)
+     fonts/Satoshi-Variable.woff2        (Fontshare → Satoshi, var 300–900)
+     fonts/JetBrainsMono.woff2           (Google Fonts → JetBrains Mono, var)
+
+   In the PROTOTYPE we load Fontshare via <link> for live preview.
+   For the offline build: remove that <link>, link THIS file instead,
+   and the @font-face below resolve locally. Family names match the
+   Fontshare ones exactly, so nothing else changes.
+   ============================================================ */
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("fonts/ClashDisplay-Variable.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("fonts/Satoshi-Variable.woff2") format("woff2-variations");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}

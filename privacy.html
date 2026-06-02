@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Emu Bench</title>
+<meta name="description" content="Como o Emu Bench trata seus dados: o que fica no seu PC, o que é opcional, e o que nunca é coletado.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="tokens.css" rel="stylesheet">
+<link href="components.css" rel="stylesheet">
+<link href="site.css" rel="stylesheet">
+<style>
+  .doc { max-width: 760px; margin: 0 auto; padding: 120px 24px 80px; }
+  .doc h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(32px, 5vw, 46px); letter-spacing: -.02em; margin: 0 0 8px; color: var(--tx-1); }
+  .doc .updated { font-family: var(--font-mono); font-size: 12px; color: var(--tx-3); margin-bottom: 40px; }
+  .doc h2 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 40px 0 12px; color: var(--tx-1); }
+  .doc p, .doc li { color: var(--tx-2); font-size: 16px; line-height: 1.7; }
+  .doc ul { padding-left: 20px; }
+  .doc li { margin-bottom: 8px; }
+  .doc strong { color: var(--tx-1); }
+  .doc .back { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); text-decoration: none; font-weight: 600; font-size: var(--fs-body-s); margin-bottom: 32px; }
+  .doc .pill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
+  .doc .pcard { border: 1px solid var(--line); border-radius: var(--r-card); padding: 18px; background: var(--bg-2); }
+  .doc .pcard.good { border-color: color-mix(in srgb, var(--good) 35%, transparent); }
+  .doc .pcard h3 { font-size: var(--fs-body); margin: 0 0 8px; color: var(--tx-1); display: flex; align-items: center; gap: 8px; }
+  @media (max-width: 620px) { .doc .pill-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="crt-overlay"></div>
+<nav class="site-nav scrolled" aria-label="Principal">
+  <div class="wrap"><a class="nav-brand" href="index.html" aria-label="Emu Bench — início"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark"></use></svg><b>Emu</b><span>Bench</span></a></div>
+</nav>
+
+<main class="doc">
+  <a class="back" href="index.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Voltar ao site</a>
+  <h1>Política de Privacidade</h1>
+  <div class="updated">Última atualização: maio de 2026 · Emu Bench v1.20.1</div>
+
+  <p>O Emu Bench é um aplicativo desktop que roda <strong>localmente no seu PC</strong>. Por padrão, ele funciona inteiramente offline e não exige conta. Esta página explica exatamente o que sai (e o que nunca sai) do seu computador.</p>
+
+  <div class="pill-grid">
+    <div class="pcard good">
+      <h3>✓ Fica sempre no seu PC</h3>
+      <ul style="margin:0">
+        <li>Suas ROMs, jogos e imagens de disco</li>
+        <li>prod.keys, BIOS e firmware</li>
+        <li>Sua senha (derivada com PBKDF2 + salt, nunca em texto puro)</li>
+        <li>Biblioteca, notas e configurações locais</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>↑ Compartilhado só se você ativar</h3>
+      <ul style="margin:0">
+        <li>Saves e configs (criptografados) — apenas com o <strong>sync na nuvem</strong> ligado</li>
+        <li>Score de hardware no leaderboard — <strong>opt-in</strong> e anônimo</li>
+        <li>Texto que você escreve ao <strong>relatar um bug</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Conta e nuvem (opcional)</h2>
+  <p>Criar conta é opcional e serve só pra sincronizar saves entre PCs e fazer backup. Você pode usar o servidor padrão ou apontar pro <strong>seu próprio servidor</strong>. Dados de save são criptografados antes do upload. Você pode <strong>apagar sua conta e todos os dados da nuvem</strong> a qualquer momento, direto no app.</p>
+
+  <h2>Telemetria</h2>
+  <p>O Emu Bench não embute rastreadores de terceiros nem anúncios. Verificações de atualização contatam o GitHub para comparar versões do app e dos emuladores — isso envolve uma requisição HTTP padrão (incluindo seu IP, como em qualquer download), mas nenhum dado pessoal é anexado.</p>
+
+  <h2>Emuladores de terceiros</h2>
+  <p>Os emuladores instalados pelo Emu Bench são software de terceiros, cada um com sua própria política e licença. O Emu Bench não controla o que esses programas fazem quando você os executa.</p>
+
+  <h2>O que o Emu Bench NÃO faz</h2>
+  <ul>
+    <li>Não distribui jogos, BIOS, firmware ou chaves (keys).</li>
+    <li>Não vende nem compartilha seus dados com anunciantes.</li>
+    <li>Não escaneia seu PC além das pastas de jogos que você indicar.</li>
+  </ul>
+
+  <h2>Contato</h2>
+  <p>Dúvidas sobre privacidade? Abra uma issue no <a href="https://github.com/Jhowzxcv/emu-bench-releases/issues" target="_blank" rel="noopener" style="color:var(--accent)">repositório no GitHub</a>.</p>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-bottom" style="margin-top:0;border-top:0">
+      <span class="legal">© 2026 Emu Bench · Open source · GPLv3</span>
+      <a class="legal" href="index.html" style="color:var(--accent);text-decoration:none">emubench.app</a>
+    </div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="mark-body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3D6FE0"/><stop offset="1" stop-color="#4C8DFF"/></linearGradient>
+  <symbol id="mark" viewBox="0 0 24 24">
+    <rect x="2" y="7" width="20" height="10" rx="5" fill="url(#mark-body)"/><rect x="2" y="7" width="20" height="5" rx="2.5" fill="#fff" opacity=".14"/>
+    <circle cx="7.5" cy="12" r="2.2" stroke="rgba(255,255,255,.9)" stroke-width=".9" fill="none"/><circle cx="7.5" cy="12" r=".95" fill="rgba(255,255,255,.95)"/>
+    <circle cx="14.7" cy="10.4" r="1" fill="#F5C451"/><circle cx="17.3" cy="12" r="1" fill="#FF6B6B"/><circle cx="14.7" cy="13.6" r="1" fill="#4C8DFF"/><circle cx="12.1" cy="12" r="1" fill="#6FE39A"/>
+  </symbol>
+</defs></svg>
+</body>
+</html>

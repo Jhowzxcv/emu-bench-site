@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emu Bench — Sua central de emulação para Windows</title>
+<meta name="description" content="Emu Bench é um app grátis e open-source que testa, compara, organiza e atualiza seus jogos em 22+ emuladores de 18+ consoles. Biblioteca unificada, teste de compatibilidade e jogar online com amigos.">
+<meta name="theme-color" content="#0A0D13">
+<link rel="canonical" href="https://emubench.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Emu Bench">
+<meta property="og:title" content="Emu Bench — Sua central de emulação para Windows">
+<meta property="og:description" content="Testa, compara e organiza seus jogos em 22+ emuladores de 18+ consoles. Grátis e open-source.">
+<meta property="og:url" content="https://emubench.app/">
+<meta property="og:image" content="https://emubench.app/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emu Bench — Sua central de emulação">
+<meta name="twitter:description" content="Testa, compara e organiza seus jogos em 22+ emuladores de 18+ consoles. Grátis e open-source.">
+<meta name="twitter:image" content="https://emubench.app/og-preview.png">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<!-- <link href="fonts.css" rel="stylesheet"> ░░ OFFLINE/SELF-HOST BUILD: troque o <link> Fontshare por este ░░ -->
+<link href="tokens.css" rel="stylesheet">
+<link href="components.css" rel="stylesheet">
+<link href="site.css" rel="stylesheet">
+</head>
+<body>
+<div class="crt-overlay"></div>
+<a href="#download" class="sr-only">Pular para download</a>
+
+<!-- ░░░░░░ NAV ░░░░░░ -->
+<nav class="site-nav" id="siteNav" aria-label="Principal">
+  <div class="wrap">
+    <a class="nav-brand" href="#top" aria-label="Emu Bench — início"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark"></use></svg><b>Emu</b><span>Bench</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#features">Recursos</a>
+      <a href="#gallery">Telas</a>
+      <a href="#start">Como começar</a>
+      <a href="#download">Download</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn--ghost ghost-hide" href="https://github.com/Jhowzxcv/emu-bench-releases" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn--citron" href="#download">Baixar</a>
+      <button class="btn btn--icon btn--ghost nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+  <!-- ░░░░░░ HERO ░░░░░░ -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-content reveal-up in">
+          <div class="eyebrow"><span class="ey-dot"></span> App desktop · Windows · grátis &amp; open-source</div>
+          <h1>Sua central de <span class="accent">emulação</span>.</h1>
+          <p class="hero-sub">Testa, compara, organiza e atualiza seus jogos em <strong style="color:var(--tx-1)">22+ emuladores</strong> de <strong style="color:var(--tx-1)">18+ consoles</strong> — numa única biblioteca, com cara de produto premium.</p>
+          <div class="hero-ctas">
+            <a class="btn btn--citron btn--xl" href="#download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg> Baixar para Windows</a>
+            <a class="btn btn--ghost btn--xl" href="https://github.com/Jhowzxcv/emu-bench-releases" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.4-3.4-1.4-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 3.9-1.4 6.8-5.2 6.8-9.7C22 6.6 17.5 2 12 2Z"/></svg> Ver no GitHub</a>
+            <div class="sub-note">Windows 10/11 64-bit · sem anúncios · sem telemetria invasiva</div>
+          </div>
+        </div>
+
+        <div class="hero-art reveal-up in" data-delay="2" aria-hidden="true">
+          <div class="app-window">
+            <div class="titlebar"><span class="tl r"></span><span class="tl y"></span><span class="tl g"></span><span class="tb-title">Emu Bench — Biblioteca</span></div>
+            <div class="mini-shell">
+              <div class="mini-side">
+                <svg class="ms-logo" viewBox="0 0 24 24"><use href="#mark"></use></svg>
+                <span class="ms-i on"></span><span class="ms-i"></span><span class="ms-i"></span><span class="ms-i"></span>
+              </div>
+              <div class="mini-main">
+                <div class="mini-grid" id="miniGrid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░ STATS ░░░░░░ -->
+  <section class="sec-pad" aria-label="Números">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-card reveal-up"><div class="sc-num">22<span class="u">+</span></div><div class="sc-label">emuladores suportados</div></div>
+        <div class="stat-card reveal-up" data-delay="1"><div class="sc-num">18<span class="u">+</span></div><div class="sc-label">consoles, do PS1 ao Switch</div></div>
+        <div class="stat-card reveal-up" data-delay="2"><div class="sc-num">100<span class="u">%</span></div><div class="sc-label">grátis, sem pegadinha</div></div>
+        <div class="stat-card reveal-up" data-delay="3"><div class="sc-num">GPL<span class="u">v3</span></div><div class="sc-label">open-source no GitHub</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░ FEATURES ░░░░░░ -->
+  <section class="sec-pad" id="features">
+    <div class="wrap">
+      <div class="sec-head-center">
+        <div class="eyebrow reveal-up"><span class="ey-dot"></span> Recursos</div>
+        <h2 class="sec-title reveal-up">Tudo o que falta num gerenciador de emulação</h2>
+        <p class="sec-lead reveal-up">Pensado pra quem leva retrogaming a sério — denso em informação, mas calmo e organizado.</p>
+      </div>
+      <div class="feat-grid" id="featGrid"></div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░ GALLERY ░░░░░░ -->
+  <section class="sec-pad" id="gallery">
+    <div class="wrap">
+      <div class="sec-head-center">
+        <div class="eyebrow reveal-up"><span class="ey-dot"></span> Telas</div>
+        <h2 class="sec-title reveal-up">Uma central de comando escura e cinematográfica</h2>
+      </div>
+      <div class="gallery reveal-up">
+        <div class="shot big tone-nin"><div class="shot-ph"><span class="shot-label">[ screenshot — biblioteca de jogos ]</span></div><span class="shot-tag">Biblioteca · grid de capas</span></div>
+        <div class="shot small tone-ps"><div class="shot-ph"><span class="shot-label">[ teste ]</span></div><span class="shot-tag">Teste 0–10</span></div>
+        <div class="shot small tone-xb"><div class="shot-ph"><span class="shot-label">[ catálogo ]</span></div><span class="shot-tag">Catálogo de emuladores</span></div>
+        <div class="shot small tone-sg"><div class="shot-ph"><span class="shot-label">[ modo TV ]</span></div><span class="shot-tag">Modo TV · Big Picture</span></div>
+        <div class="shot big tone-ps"><div class="shot-ph"><span class="shot-label">[ screenshot — benchmark &amp; presets ]</span></div><span class="shot-tag">Benchmark · preset automático</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░ STEPS ░░░░░░ -->
+  <section class="sec-pad" id="start">
+    <div class="wrap">
+      <div class="sec-head-center">
+        <div class="eyebrow reveal-up"><span class="ey-dot"></span> Como começar</div>
+        <h2 class="sec-title reveal-up">Pronto em três passos</h2>
+      </div>
+      <div class="steps-row">
+        <div class="step-card reveal-up"><div class="step-n">01</div><h3>Baixar</h3><p>Pegue o instalador pra Windows aqui no site. Leve, sem dependências externas pesadas.</p><svg class="step-conn" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="step-card reveal-up" data-delay="1"><div class="step-n">02</div><h3>Instalar</h3><p>Abra e siga o wizard de primeira execução — health check e dependências em poucos cliques.</p><svg class="step-conn" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="step-card reveal-up" data-delay="2"><div class="step-n">03</div><h3>Apontar a pasta</h3><p>Indique a pasta dos seus jogos. O Emu Bench organiza por console e busca as capas automaticamente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░ DOWNLOAD ░░░░░░ -->
+  <section class="download" id="download">
+    <div class="wrap">
+      <div class="dl-card reveal-up">
+        <div class="dl-glow"></div>
+        <div class="eyebrow" style="justify-content:center"><span class="ey-dot"></span> Download</div>
+        <h2>Comece a testar seus jogos hoje</h2>
+        <p>Grátis, open-source, sem conta obrigatória. Baixe e rode.</p>
+        <!-- aponta pra última release no repo público; o asset .exe está lá -->
+        <a class="btn btn--citron btn--xl" id="downloadBtn" href="https://github.com/Jhowzxcv/emu-bench-releases/releases/latest" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Baixar Emu Bench para Windows
+        </a>
+        <div class="dl-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Windows 10/11 64-bit</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Instalador via GitHub Releases</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Sem anúncios</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ░░░░░░ FOOTER ░░░░░░ -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div style="display:flex;align-items:center;gap:11px"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><use href="#mark"></use></svg><b>Emu Bench</b></div>
+        <p>Central de emulação premium pra Windows. Testa, compara e organiza seus jogos.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Produto</h4>
+          <a href="#features">Recursos</a>
+          <a href="#gallery">Telas</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="foot-col">
+          <h4>Projeto</h4>
+          <a href="https://github.com/Jhowzxcv/emu-bench-releases" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/Jhowzxcv/emu-bench-releases/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="https://github.com/Jhowzxcv/emu-bench-releases/issues" target="_blank" rel="noopener">Reportar bug</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Política de Privacidade</a>
+          <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">Licença GPLv3</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="foot-disclaimer">⚠ O Emu Bench <strong style="color:var(--tx-2)">não distribui jogos, BIOS, firmware ou chaves (keys)</strong> — ele apenas gerencia, testa e organiza o conteúdo que você já possui legalmente. Emuladores são software de terceiros, cada um sob sua própria licença.</p>
+
+    <div class="foot-bottom">
+      <span class="legal">© 2026 Emu Bench · Open source · GPLv3</span>
+      <span class="legal">Feito pra quem ama retrogaming 🕹</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ░░ brand mark sprite ░░ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="mark-body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3D6FE0"/><stop offset="1" stop-color="#4C8DFF"/></linearGradient>
+  <symbol id="mark" viewBox="0 0 24 24">
+    <rect x="2" y="7" width="20" height="10" rx="5" fill="url(#mark-body)"/><rect x="2" y="7" width="20" height="5" rx="2.5" fill="#fff" opacity=".14"/>
+    <circle cx="7.5" cy="12" r="2.2" stroke="rgba(255,255,255,.9)" stroke-width=".9" fill="none"/><circle cx="7.5" cy="12" r=".95" fill="rgba(255,255,255,.95)"/>
+    <circle cx="14.7" cy="10.4" r="1" fill="#F5C451"/><circle cx="17.3" cy="12" r="1" fill="#FF6B6B"/><circle cx="14.7" cy="13.6" r="1" fill="#4C8DFF"/><circle cx="12.1" cy="12" r="1" fill="#6FE39A"/>
+  </symbol>
+</defs></svg>
+
+<script src="site.js"></script>
+</body>
+</html>
